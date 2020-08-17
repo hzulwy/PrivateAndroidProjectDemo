@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请选择本年度最佳图书:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/tv_guide"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatCheckedTextView
+        android:id="@+id/checktv_java"
+        app:layout_constraintTop_toBottomOf="@id/tv_guide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:checkMark="?android:attr/listChoiceIndicatorSingle"
+        android:textSize="18sp"
+        android:text="Java编程思想"/>
+
+    <androidx.appcompat.widget.AppCompatCheckedTextView
+        android:id="@+id/checktv_android"
+        app:layout_constraintTop_toBottomOf="@id/checktv_java"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:checkMark="?android:attr/listChoiceIndicatorSingle"
+        android:textSize="18sp"
+        android:text="Android编程思想"/>
+
+    <androidx.appcompat.widget.AppCompatCheckedTextView
+        android:id="@+id/checktv_cplus"
+        app:layout_constraintTop_toBottomOf="@id/checktv_android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:checkMark="?android:attr/listChoiceIndicatorSingle"
+        android:textSize="18sp"
+        android:text="C++编程思想"/>
+
+    <Button
+        android:id="@+id/btn_inputmessage"
+        android:text="提交信息"
+        app:layout_constraintTop_toBottomOf="@id/checktv_cplus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
