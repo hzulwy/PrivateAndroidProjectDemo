@@ -71,6 +71,10 @@ public class MyItemTouchHelperCallback extends ItemTouchHelper.Callback {
 	public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
 		// 恢复
 		viewHolder.itemView.setBackgroundColor(Color.WHITE);
+		//恢复条目信息
+		viewHolder.itemView.setAlpha(1);
+		viewHolder.itemView.setScaleY(1);
+		viewHolder.itemView.setScaleX(1);
 		super.clearView(recyclerView, viewHolder);
 	}
 
