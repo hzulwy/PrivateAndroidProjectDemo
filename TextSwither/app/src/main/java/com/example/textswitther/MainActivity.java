@@ -37,8 +37,7 @@ public class MainActivity extends AppCompatActivity {
         btnStartCarousel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Message msg = mHandler.obtainMessage(1);
-                msg.what = i;
+                Message msg = mHandler.obtainMessage(i);
                 mHandler.sendMessage(msg);
             }
         });
@@ -65,8 +64,7 @@ public class MainActivity extends AppCompatActivity {
             super.handleMessage(msg);
             textSwitcher.setText(items[i % items.length]);
             i++;
-            Message msgg = mHandler.obtainMessage(1);
-            msgg.what = i;
+            Message msgg = mHandler.obtainMessage(i);
             mHandler.sendMessageDelayed(msgg, 1000);
         }
     };
