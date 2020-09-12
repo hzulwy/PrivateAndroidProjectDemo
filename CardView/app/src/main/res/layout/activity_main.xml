@@ -26,4 +26,19 @@
             android:src="@drawable/ic_launcher_background" />
     </com.google.android.material.card.MaterialCardView>
 
+    <!--     <com.google.android.material.card.MaterialCardView -->
+    <!--          android:layout_width="300dp" -->
+    <!--          android:layout_height="200dp" -->
+    <!--          app:cardCornerRadius="10dp" -->
+    <!--          app:cardElevation="10dp" -->
+    <!--          app:cardBackgroundColor="#dfa33d" -->
+    <!--          app:contentPadding="5dp" -->
+    <!--          > -->
+    <!--         <TextView -->
+    <!--             android:background="#f00" -->
+    <!--             android:layout_width="match_parent" -->
+    <!--             android:layout_height="match_parent" -->
+    <!--             android:text="我是CardView"/> -->
+    <!--     </com.google.android.material.card.MaterialCardView> -->
+
 </androidx.constraintlayout.widget.ConstraintLayout>
