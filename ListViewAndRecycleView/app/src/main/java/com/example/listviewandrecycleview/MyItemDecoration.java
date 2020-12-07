@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MyItemDecoration extends RecyclerView.ItemDecoration {
+public class MyItemDecoration extends RecyclerView.ItemDecoration {//如果要为每个条目添加间距必须重写ItemDecoration，因为原始的ItemDecoration只会给第一条添加间距
     private int mOrientation = LinearLayoutManager.VERTICAL;
     private Drawable mDivider;
     private int[] attrs= new int[]{
