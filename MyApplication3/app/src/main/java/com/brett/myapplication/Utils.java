@@ -36,10 +36,11 @@ public class Utils {
 
                 for (int id :value){
                     try {
-                        //找到Button
-                        Method findViewByIdMethod = activityClass.getMethod("findViewById", int.class);
-                        findViewByIdMethod.setAccessible(true);
-                        View btn = (View) findViewByIdMethod.invoke(activity, id);
+                          //找到Button ,可以不使用反射来获取findViewById方法，因为传了activity参数
+//                        Method findViewByIdMethod = activityClass.getMethod("findViewById", int.class);
+//                        findViewByIdMethod.setAccessible(true);
+//                        View btn = (View) findViewByIdMethod.invoke(activity, id);
+                        View btn = activity.findViewById(id);
                         //根据listenerSetter方法名和listenerType方法参数找到method
                         Method listenerSetMethod = btn.getClass().getMethod(listenerSetter, listenerType);
                         listenerSetMethod.setAccessible(true);
@@ -73,9 +74,10 @@ public class Utils {
 
                 try {
                     //找到findViewById方法
-                    Method findViewByIdMethod = activityClass.getMethod("findViewById", int.class);
-                    findViewByIdMethod.setAccessible(true);
-                    View btn = (View)findViewByIdMethod.invoke(activity, value);
+//                    Method findViewByIdMethod = activityClass.getMethod("findViewById", int.class);
+//                    findViewByIdMethod.setAccessible(true);
+//                    View btn = (View)findViewByIdMethod.invoke(activity, value);
+                    View btn = activity.findViewById(value);
                     field.set(activity,btn);
                 } catch (NoSuchMethodException e) {
                     e.printStackTrace();
